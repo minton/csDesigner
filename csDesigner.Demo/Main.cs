@@ -15,5 +15,15 @@ namespace csDesigner.Demo
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var designer = new Designer();
+            designer.RootComponent.Text = "My Test Root";
+            designer.RootComponent.BackColor = Color.Magenta;
+            designer.DesignerView.Text = "My Test View";
+            designer.DesignerView.Dock = DockStyle.Fill;
+            designer.DesignerView.Parent = this;
+        }
     }
 }
